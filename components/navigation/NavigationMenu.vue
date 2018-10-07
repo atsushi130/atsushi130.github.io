@@ -19,8 +19,8 @@ import {
   Vue
 } from "nuxt-property-decorator"
 
-@Component({})
-export default class NavigationMenu extends Vue{
+@Component
+export default class NavigationMenu extends Vue {
   @Prop() items
 }
 </script>
