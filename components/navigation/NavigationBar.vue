@@ -5,7 +5,7 @@
 <template>
   <nav id="topNav" class="navigation">
     <div class="navigation__bar">
-      <navigation-menu></navigation-menu>
+      <navigation-menu :items="items"></navigation-menu>
     </div>
   </nav>
 </template>
@@ -13,7 +13,6 @@
 <script lang="ts">
 
 import NavigationMenu from './NavigationMenu.vue'
-Vue.component("navigation-menu", NavigationMenu)
 
 import {
   Component,
@@ -27,6 +26,8 @@ import {
   }
 })
 export default class NavigationBar extends Vue {
+  name: string = "navigation-bar"
+  @Prop() items
 }
 </script>
 
