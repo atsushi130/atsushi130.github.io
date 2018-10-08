@@ -1,10 +1,5 @@
 <template>
-  <section>
-    <h1 class="header">Nuxt TypeScript Starter</h1>
-    <div class="cards">
-      <Card v-for="person in people" :key="person.id" :person="person"></Card>
-    </div>
-  </section>
+  <navigation-menu :items="items"></navigation-menu>
 </template>
 
 <script lang="ts">
@@ -13,15 +8,15 @@ import {
   Vue
 } from "nuxt-property-decorator"
 import { State } from "vuex-class"
-import Card from "~/components/Card.vue"
+import NavigationMenu from "../components/navigation/NavigationMenu.vue"
 
 @Component({
   components: {
-    Card
+    NavigationMenu
   }
 })
 export default class extends Vue {
-  @State people
+  @State items
 }
 </script>
 <style scoped>
