@@ -1,18 +1,23 @@
+
+import Item from "../models/Item"
+
 export const state = () => ({
-  people: []
+  items: []
 })
 
 export const mutations = {
-  setPeople(state, people) {
-    state.people = people
+  setItems(state, items) {
+    state.items = items
   }
 }
 
 export const actions = {
   async nuxtServerInit({ commit }, { app }) {
-    const people = await app.$axios.$get(
-      "./random-data.json"
-    )
-    commit("setPeople", people.slice(0, 10))
+
+    const items = [
+      new Item("google", "https://google.com")
+    ]
+
+    commit("setItems", items)
   }
 }
