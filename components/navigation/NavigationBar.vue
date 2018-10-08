@@ -31,7 +31,7 @@ export default class NavigationBar extends Vue {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navigation {
   position: fixed;
   right: 0px;
