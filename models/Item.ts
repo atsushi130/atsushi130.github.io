@@ -2,7 +2,7 @@
 /// Item model
 /// Copyright (c) 2018 Atsushi Miyake. All rights reserved.
 
-export class Item {
+export default class Item {
   title: string
   url: string
 
