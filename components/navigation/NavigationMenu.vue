@@ -26,17 +26,19 @@ export default class NavigationMenu extends Vue {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navigation__menu {
   display: inline-block;
 
-  &--item {
-    text-decoration: none;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+    margin-left: 30px;
   }
 
   ul {
-    display: inline-block;
-    list-style: none;
+    padding-left: 30px;
   }
 }
 </style>
