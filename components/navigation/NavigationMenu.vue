@@ -6,7 +6,7 @@
   <div class="navigation__menu">
     <ul>
       <li v-for="item in items">
-        <a class="navigation__menu--item" href="#{ item.url }">{ item.title }</a>
+        <a class="navigation__menu--item" v-bind:href="item.url">{{ item.title }}</a>
       </li>
     </ul>
   </div>
@@ -21,6 +21,7 @@ import {
 
 @Component
 export default class NavigationMenu extends Vue {
+  name: string = "navigation-item"
   @Prop() items
 }
 </script>
