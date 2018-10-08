@@ -1,5 +1,5 @@
 <template>
-  <navigation-menu :items="items"></navigation-menu>
+  <navigation-bar :items="items"></navigation-bar>
 </template>
 
 <script lang="ts">
@@ -8,25 +8,14 @@ import {
   Vue
 } from "nuxt-property-decorator"
 import { State } from "vuex-class"
-import NavigationMenu from "../components/navigation/NavigationMenu.vue"
+import NavigationBar from "../components/navigation/NavigationBar.vue"
 
 @Component({
   components: {
-    NavigationMenu
+    NavigationBar
   }
 })
 export default class extends Vue {
   @State items
 }
 </script>
-<style scoped>
-.header {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-</style>
