@@ -30,6 +30,16 @@ export default class NavigationMenu extends Vue {
 .navigation__menu {
   display: inline-block;
 
+  &--item {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   li {
     display: inline-block;
     list-style: none;
